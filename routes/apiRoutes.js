@@ -34,7 +34,6 @@ module.exports = (app) => {
     
     fs.writeFileSync('../db/db.json', JSON.stringify(deleteNotes));
     res.json(deleteNotes);
-
     
   })
 };
