@@ -10,7 +10,7 @@ module.exports = (app) => {
   });
 
   app.post('/api/notes', (req, res) => {
-    let db = fs.readFileSync('db/db.json');
+    let db = fs.readFileSync('../db/db.json');
     db = JSON.parse(db);
     res.json(db);
     
@@ -22,14 +22,14 @@ module.exports = (app) => {
     };
    
     db.push(userNote);
-    fs.writeFileSync('db/db.json', JSON.stringify(db));
+    fs.writeFileSync('../db/db.json', JSON.stringify(db));
     res.json(db);
 
   });
 
   app.delete('/api/notes/:id', (req, res) => {
    
-    let db = JSON.parse(fs.readFileSync('db/db.json'))
+    let db = JSON.parse(fs.readFileSync('../db/db.json'))
     
     let deleteNotes = db.filter(item => item.id !== req.params.id);
     
