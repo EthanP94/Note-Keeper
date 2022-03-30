@@ -31,7 +31,8 @@ module.exports = (app) => {
     
     let deleteNotes = db.filter(item => item.id !== req.params.id);
     
-    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(db));
+    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(deleteNotes));
+    
     res.json(deleteNotes);
 
   })
