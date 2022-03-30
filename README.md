@@ -2,7 +2,9 @@
   ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description 
-  This project is an application called Note Taker that can be used to write and save notes. This application uses an Express.js back end and will save and retrieve note data from a JSON file. This application will also be deployed to Heroku.
+  This project is an application called Note Taker that can be used to write and save notes. This application uses an Express.js back end and will save and retrieve note data from a JSON file. This application will also be deployed to Heroku. 
+  Click [here](https://dashboard.heroku.com/apps/warm-wildwood-26018) to go to Heroku. 
+  
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
