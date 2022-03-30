@@ -16,7 +16,6 @@ module.exports = (app) => {
     let userNote = {
       title: req.body.title,
       text: req.body.text,
-      
       id: uniqid(),
     };
    
@@ -28,7 +27,7 @@ module.exports = (app) => {
 
   app.delete('/api/notes/:id', (req, res) => {
    
-    let db = JSON.parse(fs.readFileSync('../db/db.json'))
+    let db = JSON.parse(fs.readFileSync(__dirname, '../db/db.json'))
     
     let deleteNotes = db.filter(item => item.id !== req.params.id);
     
