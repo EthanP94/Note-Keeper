@@ -10,7 +10,7 @@ module.exports = (app) => {
   });
 
   app.post('/api/notes', (req, res) => {
-    let db = fs.readFileSync('../db/db.json');
+    let db = fs.readFileSync(path.join(__dirname, '../db/db.json'));
     db = JSON.parse(db);
     
     let userNote = {
@@ -21,7 +21,7 @@ module.exports = (app) => {
     };
    
     db.push(userNote);
-    fs.writeFileSync('../db/db.json', JSON.stringify(db));
+    fs.writeFileSync(path.join(__dirname, '../db/db.json'), JSON.stringify(db));
     res.json(db);
 
   });
@@ -34,6 +34,6 @@ module.exports = (app) => {
     
     fs.writeFileSync('../db/db.json', JSON.stringify(deleteNotes));
     res.json(deleteNotes);
-    
+
   })
 };
